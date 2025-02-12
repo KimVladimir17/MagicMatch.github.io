@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Standard syntax */
+    background: #1b1523;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 100%;
+    width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 25px;
+    font-weight: 900;
+}
+
+.button {
+    margin-bottom: 25px;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    padding: 1px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.row {
+    max-width: 645px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.item__close {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(img/cover.png);
+    transition: transform 0.5s linear;
+    transform: perspective(600px) rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.item__open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background-size: cover;
+    transform: perspective(600px) rotateY(180deg);
+    transition: transform 0.5s linear;
+}
+
+/* .item-rotated {
+    transform: rotateY(180deg);
+} */
+
+.item__close-hover {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.item__open-hover {
+    transform: perspective(600px) rotateY(0deg);
+    position: relative;
+}
+
+
+.item-open-id-1 {
+    background-image: url(img/helmet-1.png);
+    background-size: cover;
+}
+
+.item-open-id-2 {
+    background-image: url(img/potion-1.png);
+    background-size: cover;
+}
+
+.item-open-id-3 {
+    background-image: url(img/ring-1.png);
+    background-size: cover;
+}
+
+.item-open-id-4 {
+    background-image: url(img/scroll-1.png);
+    background-size: cover;
+}
+
+.item-open-id-5 {
+    background-image: url(img/shield-1.png);
+    background-size: cover;
+}
+
+.item-open-id-6 {
+    background-image: url(img/sword-1.png);
+    background-size: cover;
+}
+
+.counter {
+    margin-top: 25px;
+}
